@@ -4,6 +4,9 @@ import counterReducer  from './counter';
 
 import { combineReducers } from 'redux';
 
+/**
+ * combine reducers
+ */
 const myReducers = combineReducers({
     loggedReducer,
     counterReducer

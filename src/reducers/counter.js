@@ -1,3 +1,8 @@
+/**
+ * @method counter reducer
+ * @param {int} state 
+ * @param {function} action 
+ */
 const counterReducer = (state = 4, action) => {
     switch (action.type) {
         case 'INC':
