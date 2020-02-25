@@ -15,8 +15,8 @@ You will also see any lint errors in the console.
 ### Actions
 
 There are 2 actions created:
-- inc() - incrementing state value by 1
-- dec() - decrementing state value by 1
+    inc() - incrementing state value by 1
+    dec() - decrementing state value by 1
 
 ### Reducers
 
@@ -39,5 +39,21 @@ Alredy created reducer must be passed to store.
 
 To see the state value increased lets dispatch an action:
 
-store.dispatch(inc());
-store.dispatch(dec());
+    store.dispatch(inc());
+    store.dispatch(dec());
+
+### Connecting store to the app
+
+Pass store to the Provider
+
+    <Provider store={store}>
+    
+### Consuming store / dispaying states value
+
+Import useSelector from 'react-redux' package, and read up a redux state.
+
+    const count = useSelector(state => state.counterReducer);
+    
+ display count as a normal variable: 
+ 
+     {count} 
