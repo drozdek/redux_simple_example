@@ -10,5 +10,15 @@ module.exports = {
     contentBase: path.join(__dirname, "dist"),
     port: 3000
   },
-  mode: "development"
+  module: {
+    rules: [
+      { test: /\.jsx?$/, loader: 'babel-loader', 
+        exclude: /node_modules/ 
+      },
+      { test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      }
+    ]
+  },
+  mode: "development"  
 };
