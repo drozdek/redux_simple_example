@@ -31,7 +31,7 @@ store.dispatch(
 console.log("resolving: ")
 // console.log(store.getState())
 
-// 3.0
+// 3
 store.dispatch(
     {
         type: 'BUG_REMOVE',

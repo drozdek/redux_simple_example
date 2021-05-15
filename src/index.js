@@ -4,15 +4,16 @@ import TextBox from './components/TextBox.js';
 
 class App extends React.Component {
     render() {
-        return (            
+        return (
             <div>
                 <TextBox />
-                Hello World and Rafalek :)</div>
+                <p>Hello World :)</p>
+            </div>
         )
     }
 }
 
 ReactDOM.render(
-    <App />,
+        <App />,
     document.getElementById('app')
 );

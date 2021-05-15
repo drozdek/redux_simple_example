@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js",
-    "react": "webpack-dev-server --open"
+    "react": "webpack-dev-server --open --config ./webpack-rect-config.js"
   },
   "keywords": [],
   "author": "Mosh Hamedani",
@@ -21,6 +21,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^5.2.4",
     "html-webpack-plugin": "^5.3.1",
+    "react-redux": "^7.2.4",
     "style-loader": "^2.0.0",
     "webpack": "4.41.6",
     "webpack-cli": "3.3.11",
