@@ -1,14 +1,17 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment } from '../actions/actions';
 
-class TextBox extends React.Component {
 
-    render() {
-        return (
-            <div>
-                TextBox {new Date().toString()}
-            </div>
-        )
-    }
+function TextBox() {
+    const counter = useSelector(state => state.counter)
+    const dispatch = useDispatch();
+    return (
+        <div>
+            <button onClick={() => dispatch( increment())}>+++</button>
+            TextBox { counter}
+        </div>
+    )
 
 }
 
