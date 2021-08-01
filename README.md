@@ -18,8 +18,8 @@ You will also see any lint errors in the console.
 ### Actions
 
 There are 2 actions created:
-    inc() - incrementing state value by 1
-    dec() - decrementing state value by 1
+    increment() - incrementing state value by 1
+    decrement() - decrementing state value by 1
 
 ### Reducers
 
@@ -42,8 +42,8 @@ Alredy created reducer must be passed to store.
 
 To see the state value increased lets dispatch an action:
 
-    store.dispatch(inc());
-    store.dispatch(dec());
+    store.dispatch(increment());
+    store.dispatch(decrement());
 
 ### Connecting store to the app
 
