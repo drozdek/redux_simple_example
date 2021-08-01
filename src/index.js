@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TextBox from './components/TextBox.js';
+import Button from './components/Button';
 import { createStore } from 'redux';
 import { increment, decrement } from './actions/actions';
 import { Provider } from 'react-redux';
@@ -11,10 +11,7 @@ let s = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-
-
-// dispatch
-// wotking version with no hooking up to react yet
+// dispatching methods manually
 s.dispatch(increment());
 console.log(s.getState())
 s.dispatch(increment());
@@ -22,14 +19,14 @@ s.dispatch(increment());
 console.log(s.getState())
 s.dispatch(decrement());
 console.log(s.getState())
-//  s.subscribe( () => console.log(s.getState()))
+ s.subscribe( () => console.log(s.getState()))
 
 // display
 // console.log(store.dispatch(store.getState()))
 
 ReactDOM.render(
     <Provider store={s}>
-        <TextBox />,
+        <Button />,
     </Provider>,
     document.getElementById('app')
 );
